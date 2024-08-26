@@ -12,7 +12,8 @@ div {
 div:last-child {
     width: 100%;
     margin-top: 60%;
-    margin-bottom: 20px;
+    float: right; /* Floating the bottom div to the right */
+    margin-bottom: 20px; /* Adding margin-bottom */
 }
 
 /* h3 tags styling */
@@ -42,3 +43,4 @@ ul {
 a:hover {
     text-decoration: underline;
 }
+
