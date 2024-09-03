@@ -1,0 +1,48 @@
+/* Style for the main container */
+#container {
+    text-align: center;
+}
+
+/* Style for the h1 heading */
+h1 {
+    color: rgba(0, 128, 128, 0.8);
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Style for the image gallery */
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    gap: 20px; /* Add space between the columns */
+    margin-top: 10%;
+    justify-items: center; /* Center the content in each grid item */
+}
+
+/* Style for each gallery item */
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item h3 {
+    color: rgba(75, 0, 130, 0.8);
+    margin-bottom: 10px;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(255, 69, 0, 0.8);
+}
+
+/* Style for the link back to the portal page */
+a {
+    display: block;
+    margin-top: 20px;
+    color: blue;
+}
+
