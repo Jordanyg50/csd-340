@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="CSD 340 Module 2 Web Page">
+    <meta name="author" content="Jordany Gonzalez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, Web Development">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="Gonzalez_Mod9_3.css">
+
+    <title>CSD 340 Development with HTML and CSS</title>
+</head>
+<body>
+
+<div id="container">
+    <!-- Header -->
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+    <h2>A Good Coach</h2>
+<p>When you think of a coach, you want someone who not only focuses on the <span id="word1">_____</span> but also focuses on every single person <span id="word2">_____</span>,
+ especially in a team sport like soccer. A good coach helps the <span id="word3">_____</span> team grow as a unit by helping each player grow individually and
+ then combining everyone’s strength to make the team strong. I had a coach when I was about 12 years old that helped me understand what 
+it meant to be a good coach. To me, the best coach I ever had was Coach <span id="word4">_____</span>. He redefined what it meant to play soccer and made a 
+difference in many kids’ hearts.</p>
+
+<p>When I joined the team, I immediately thought we were not going to make it very far. I recognized some of the players on the team, and
+ I had played with some before. One kid who always stood out to me was our right defender, Mitchel. Mitchel was not very good, and a lot of 
+coaches never really wanted him, but Coach Norbert did. I remember playing versus Mitchel and thinking it was always easy to get past him. As 
+for the rest of the team, you could tell every person had flaws, including me. We really had our work cut out for us if we wanted to qualify for the playoffs.</p>
+
+<p>Coach Norbert would purposely take us out of the game in order to let us know how we were doing and where we needed to improve. 
+He would send us right back in, and if we didn’t listen to his advice, he would pull us out immediately again. His tactics were a little unorthodox,
+ but they worked because as a kid, you never want to be pulled from the game. What I found astounding was that his own son played on the team, and he
+ treated him the same as everyone else. Everything Coach Norbert did was amazing. He made everyone feel lucky to be part of the team. Believe it or not,
+ we ended up as undefeated champions that season.</p>
+
+  
+  <button onclick="replaceWord('word1')">Replace Word 1</button>
+  <button onclick="replaceWord('word2')">Replace Word 2</button>
+  <button onclick="replaceWord('word3')">Replace Word 3</button>
+  <button onclick="replaceWord('word4')">Replace Word 4</button>
+  
+  <script>
+    let word1 = "team";
+    let word2 = "individually";
+    let word3 = "entire";
+    let word4 = "Norbert";
+  
+    function replaceWord(id) {
+      document.getElementById(id).textContent = eval(id);
+    }
+  </script>   
+ <!-- Horizontal Line -->
+    <hr />
+
+    <!-- Address -->
+    <address>
+        <p><a href="https://www.bellevue.edu" target="_blank">Bellevue University</a></p>
+        <p>1000 Galvin Road South</p>
+        <p>Bellevue, Nebraska 68005</p>
+    </address>
+    p><a href="../index.html">Back to Landing Page</a></p>
+
+</div>
+</body>
+</html>
+
