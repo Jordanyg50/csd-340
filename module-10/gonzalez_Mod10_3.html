@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="gonzalez_Mod10_3.css">
+</head>
+<body>
+    <h1>Click the Bench Image to Change It</h1>
+
+    <img id="benchImage" src="RegularBench.jpeg" alt="Regular Bench"
+         onclick="
+            if (this.src.includes('RegularBench.jpeg')) {
+                this.src = 'NegativeBench.jpeg';
+                this.alt = 'Negative Bench';
+            } else {
+                this.src = 'RegularBench.jpeg';
+                this.alt = 'Regular Bench';
+            }
+         " 
+         style="width:400px; height:500px;">
+
+         <h1>Click the Motorcycle Image to Change It</h1>
+         <img id="hondaImage" src="RegularHonda.jpeg" alt="Regular Honda"
+         onclick="
+            if (this.src.includes('RegularHonda.jpeg')) {
+                this.src = 'NegativeHonda.jpeg';
+                this.alt = 'Negative Honda';
+            } else {
+                this.src = 'RegularHonda.jpeg';
+                this.alt = 'Regular Honda';
+            }
+         " 
+         style="width:400px; height:500px;">
+</body>
+</html>
+
+
