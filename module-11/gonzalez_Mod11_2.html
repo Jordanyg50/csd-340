@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="gonzalez_Mod11_2.css">
+</head>
+<body>
+
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <p>Enter a task and use the buttons to manage your To Do List.</p>
+
+    <!-- Input and buttons -->
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button onclick="addTask()">Add</button>
+    <button onclick="deleteLastTask()">Delete Last Entry</button>
+    <button onclick="toggleDisplay()">Display</button>
+
+    <!-- Area to display tasks -->
+    <div id="displayArea"></div>
+
+    <script>
+        // Initialize an empty array to hold tasks
+        let tasks = [];
+
+        // Function to add a task to the array
+        function addTask() {
+            let task = document.getElementById("taskInput").value;
+            if (task) {
+                tasks.push(task);
+                alert('Added: ' + task + ' at position ' + tasks.length);
+                document.getElementById("taskInput").value = "";  // Clear the input field
+                updateDisplay();  // Automatically update the display when a task is added
+            } else {
+                alert('Please enter a task.');
+            }
+        }
+
+        // Function to delete the last task from the array
+        function deleteLastTask() {
+            if (tasks.length > 0) {
+                let removedTask = tasks.pop();
+                alert('Deleted: ' + removedTask);
+                updateDisplay();  // Update the display after deleting
+            } else {
+                alert('No tasks to delete.');
+            }
+        }
+
+        // Function to toggle the visibility of the display area
+        function toggleDisplay() {
+            let displayArea = document.getElementById("displayArea");
+            if (displayArea.style.display === "none") {
+                displayArea.style.display = "block";
+                updateDisplay();  // Ensure the latest tasks are shown when made visible
+            } else {
+                displayArea.style.display = "none";
+            }
+        }
+
+        // Function to update the tasks display
+        function updateDisplay() {
+            let displayArea = document.getElementById("displayArea");
+            displayArea.innerHTML = "";  // Clear the display area
+
+            if (tasks.length > 0) {
+                let list = "<ul>";  // Start an unordered list
+                for (let i = 0; i < tasks.length; i++) {
+                    list += "<li>item " + (i + 1) + ": " + tasks[i] + "</li>";  // Add "item X: task"
+                }
+                list += "</ul>";  // End the unordered list
+                displayArea.innerHTML = list;
+            } else {
+                displayArea.innerHTML = "<p>No tasks to display.</p>";
+            }
+        }
+    </script>
+    <footer>
+        &copy; 2024 Gonzalez <a href="/csd/csd-340/index.html">Back to Portal</a>
+    </footer>
+    
+
+</body>
+</html>
