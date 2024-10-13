@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="gonzalez_Mod12_3.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+        <!-- Buttons to display the sorted book list -->
+        <button onclick="displayTopToBottom()">Top to Bottom</button>
+        <button onclick="displayBottomToTop()">Bottom to Top</button>
+
+        <!-- Red highlighted box for the book list -->
+        <div id="bookList">
+            <h3>Top 10 Favorite Books</h3>
+            <p>Click the buttons above to display the books in ascending or descending order.</p>
+        </div>
+
+        <!-- List of 5 things learned in a dashed, lighter red box -->
+        <div id="learnedList">
+            <h3>5 Things I’ve Learned in This HTML Class</h3>
+            <ul>
+                <li>How to structure a webpage with HTML elements.</li>
+                <li>How to style webpages using CSS effectively.</li>
+                <li>The importance of linking CSS and JavaScript files to HTML.</li>
+                <li>How to create interactive webpages using JavaScript.</li>
+                <li>How to use GitHub to manage and deploy projects.</li>
+            </ul>
+        </div>
+
+        <!-- Link back to the landing page -->
+        <div style="width: 100%; margin-top: 60%;">
+            <a href="../index.html" style="float: right;">Back to Landing Page</a>
+        </div>
+    </div>
+
+    <script>
+        // Array of top 10 books
+        const books = [
+            "The Invention of Hugo Cabret",
+            "Harry Potter and the Half Blood Prince",
+            "The Great Gatsby",
+            "Looking for Alaska",
+            "Lord of the Flies",
+            "To Kill a MockingBird",
+            "Outliers",
+            "Harry Potter and the Prisoner of Azkaban",
+            "Cat in the Hat",
+            "HTML and CSS design and build websites"
+        ];
+
+        // Function to display books from top to bottom (ascending order)
+        function displayTopToBottom() {
+            let sortedBooks = [...books].sort();
+            document.getElementById('bookList').innerHTML =
+                "<h3>Top 10 Favorite Books</h3>" + 
+                sortedBooks.join("<br>");
+        }
+
+        // Function to display books from bottom to top (descending order)
+        function displayBottomToTop() {
+            let sortedBooks = [...books].sort().reverse();
+            document.getElementById('bookList').innerHTML =
+                "<h3>Top 10 Favorite Books</h3>" + 
+                sortedBooks.join("<br>");
+        }
+    </script>
+
+    <footer>
+        &copy; 2024 Gonzalez <a href="../index.html">Back to Portal</a>
+    </footer>
+</body>
+</html>
+

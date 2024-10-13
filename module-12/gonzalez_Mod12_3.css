@@ -1,0 +1,37 @@
+/* Styling the book list box */
+#bookList {
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+    width: 45%;
+    float: left;
+}
+
+/* Styling for the learned items list */
+#learnedList {
+    border: 2px dashed lightcoral; /* Lighter red dashed border */
+    padding: 10px;
+    border-radius: 10px;
+    width: 45%;
+    float: left;
+    margin-left: 5%;
+}
+
+/* Clearfix to contain floated elements */
+#container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Styling the h1 title */
+h1 {
+    text-align: center;
+}
+
+/* Link hover effect */
+a:hover {
+    text-decoration: underline;
+}
+
