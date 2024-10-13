@@ -1,46 +1,44 @@
-/* Center the h1 title */
+/* Container for both lists, using flexbox for side-by-side layout */
+#listsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+/* Styling the book list box */
+#bookList {
+    border: 2px solid red; /* Solid red border for the book list */
+    padding: 10px;
+    border-radius: 10px;
+    width: 45%; /* Make sure both lists have equal widths */
+}
+
+/* Styling for the learned items list */
+#learnedList {
+    border: 2px dashed lightcoral; /* Dashed lighter red border for the learned list */
+    padding: 10px;
+    border-radius: 10px;
+    width: 45%; /* Same width as the book list */
+}
+
+/* Clearfix to contain floated elements */
+#container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Styling the h1 title */
 h1 {
     text-align: center;
-}
-
-/* Side-by-side divs */
-div {
-    width: 45%;
-}
-
-/* Last div */
-div:last-child {
-    width: 100%;
-    margin-top: 60%;
-    float: right; /* Floating the bottom div to the right */
-    margin-bottom: 20px; /* Adding margin-bottom */
-}
-
-/* h3 tags styling */
-h3 {
-    font-weight: 500;
-}
-
-/* Lists styling */
-ol {
-    font-weight: 300;
-    border: 1px solid red;
-    border-radius: 15px;
-    padding: 10px;
-    list-style-position: inside; /* Ensures the numbers are inside the border */
-}
-
-ul {
-    font-weight: 300;
-    border: 1px dashed red;
-    border-radius: 15px;
-    padding: 10px;
-    list-style: upper-roman;
-    list-style-position: inside; /* Ensures the bullets are inside the border */
+    margin-bottom: 20px;
 }
 
 /* Link hover effect */
 a:hover {
     text-decoration: underline;
 }
+
+
+
 
